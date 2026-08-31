@@ -1,4 +1,8 @@
-FROM node:26.8.1-alpine3.24 AS base
+FROM node:26.8.1-alpine3.24 AS alpine
+
+# ----------
+
+FROM alpine AS base
 
 WORKDIR /home/node
 
@@ -26,7 +30,7 @@ RUN npm run build
 
 # ----------
 
-FROM node:26.8.1-alpine3.24 AS prod
+FROM alpine AS prod
 
 WORKDIR /home/node
 

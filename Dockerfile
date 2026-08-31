@@ -16,6 +16,8 @@ COPY src src
 
 FROM base AS dev
 
+ENV NODE_ENV=dev
+
 USER node
 
 CMD ["npm", "run", "dev"]
@@ -39,6 +41,8 @@ COPY package.json package-lock.json .
 RUN npm ci --only=prod
 
 COPY --from=build /home/node/dist .
+
+ENV NODE_ENV=prod
 
 USER node
 

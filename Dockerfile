@@ -8,7 +8,7 @@ WORKDIR /home/node
 
 COPY package.json package-lock.json .
 
-RUN npm i
+RUN npm ci
 
 COPY src src
 
@@ -36,7 +36,7 @@ WORKDIR /home/node
 
 COPY package.json package-lock.json .
 
-RUN npm i --only=prod
+RUN npm ci --only=prod
 
 COPY --from=build /home/node/dist .
 

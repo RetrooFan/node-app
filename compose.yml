@@ -1,0 +1,7 @@
+services:
+  node-app:
+    image: 336757183457.dkr.ecr.eu-central-1.amazonaws.com/node-app:1.1
+    # build: .
+    container_name: node-app
+    ports:
+      - "3000:3000"

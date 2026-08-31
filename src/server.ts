@@ -3,7 +3,7 @@ import express from 'express';
 export const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.send(`Hello, ${process.env.NODE_ENV} World!`);
 });
 
 if (process.env.npm_lifecycle_event !== 'test') {

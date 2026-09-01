@@ -7,7 +7,7 @@
     "build": "tsc",
     "prod": "node .",
     "dev": "tsx src/server.ts",
-    "test": "tsx --test src/**/*.test.ts",
+    "test": "NODE_ENV=test tsx --test src/**/*.test.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --check .",

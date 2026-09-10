@@ -5,3 +5,9 @@ services:
     container_name: node-app-dev
     ports:
       - '3000:3000'
+  node-app-prod:
+    build:
+      target: prod
+    container_name: node-app-prod
+    ports:
+      - '8000:3000'

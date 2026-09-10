@@ -1,7 +1,7 @@
 services:
-  node-app:
+  node-app-dev:
     build:
       target: dev
-    container_name: node-app
+    container_name: node-app-dev
     ports:
       - '3000:3000'

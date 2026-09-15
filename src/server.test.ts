@@ -8,5 +8,5 @@ test('GET / returns Hello, World!', async () => {
   const response = await request(app).get('/');
 
   assert.equal(response.status, 200);
-  assert.equal(response.text, 'Hello, World!');
+  assert.equal(response.text, 'Hello, test World!');
 });

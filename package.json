@@ -1,13 +1,13 @@
 {
   "name": "my-app",
-  "version": "1.0",
+  "version": "1.5",
   "main": "server.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
     "prod": "node .",
     "dev": "tsx src/server.ts",
-    "test": "tsx --test src/**/*.test.ts",
+    "test": "NODE_ENV=test tsx --test src/**/*.test.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --check .",

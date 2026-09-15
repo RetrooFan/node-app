@@ -16,19 +16,13 @@ jobs:
         node-version: [24.x, 26.x]
 
     steps:
-      -
-        uses: actions/checkout@v5
-      -
-        name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/checkout@v5
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      -
-        run: npm ci
-      -
-        run: npm run lint
-      -
-        run: npm run format
-      -
-        run: npm test
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format
+      - run: npm test

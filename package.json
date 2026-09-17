@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "version": "1.5",
+  "version": "1.6",
   "main": "server.js",
   "scripts": {
     "prebuild": "rimraf dist",
